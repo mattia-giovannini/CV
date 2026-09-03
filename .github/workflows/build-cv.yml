@@ -75,6 +75,7 @@ jobs:
           cp cv/it/CV-IT-public.pdf site/CV-IT.pdf
           cp cv/en/CV_EN-public.pdf site/CV_EN.pdf
           cp cv/fr/CV_FR-public.pdf site/CV_FR.pdf
+          cp assets/favicon.svg site/favicon.svg
           cat > site/index.html <<'HTML'
           <!doctype html>
           <html lang="it">
@@ -82,6 +83,7 @@ jobs:
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="robots" content="noindex, nofollow">
+            <link rel="icon" type="image/svg+xml" href="favicon.svg">
             <title>Mattia Giovannini — CV</title>
             <style>
               :root { --ink: #201d18; --sub: #6b6459; --line: #e6e1d6; --panel: #faf8f4; --amber: #a8660c; }
