@@ -1,6 +1,6 @@
 # CV
 
-Repository privata per versionare il curriculum in più lingue.
+Repository pubblica per versionare il curriculum in più lingue.
 
 ## Struttura
 
