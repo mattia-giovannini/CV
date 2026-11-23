@@ -3,7 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
-\usepackage[margin=2cm, top=1.8cm, bottom=1.8cm]{geometry}
+\usepackage[margin=1.8cm, top=1.3cm, bottom=1.3cm]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{hyperref}
@@ -31,7 +31,7 @@
   {}{0em}{}
   [\vspace{0.3em}\color{lightgray}\hrule\vspace{0.4em}]
 
-\titlespacing{\section}{0pt}{1.2em}{0.5em}
+\titlespacing{\section}{0pt}{0.9em}{0.4em}
 
 \pagestyle{empty}
 
@@ -121,6 +121,11 @@ Diplômé en ingénierie informatique à l'Université de Bologne et inscrit en 
 \entrylist{Scheduler Kubernetes sensible aux ressources — Project Work}{2026 (En cours)}{Enterprise Platforms and DevOps M, Université de Bologne}{}{
   \item Développement d'un \textbf{scheduler Kubernetes personnalisé} en Python qui place chaque pod sur le nœud de plus faible latence disposant de CPU, mémoire et capacité suffisantes.
   \item Latence mesurée en temps réel, chaque décision justifiée par des événements Kubernetes ; extension en cours vers le \textbf{placement intelligent} de services sur nœuds edge mobiles (robots humanoïdes).
+}
+
+\entrylist{Benchmark de restauration après panne de lien SDN}{2026 (En cours)}{Discrete and Network Optimization Problems M, Université de Bologne · \href{https://github.com/frigori/net-restoration-bench}{github.com/frigori/net-restoration-bench}}{}{
+  \item Comparaison de la \textbf{protection par chemins de secours partagés (SBPP)}, du \textbf{Fast Reroute} et du \textbf{recalcul global MILP} : surcoût en capacité, taux de restauration, temps de réaction.
+  \item Python avec NetworkX et PuLP ; une interface plan/react commune exécute les stratégies sur les mêmes topologies et scénarios de panne.
 }
 
 \entrylist{AgenticOS — Audit IA multi-agents}{2026}{Lean Startup Lab, Technology Entrepreneurship · \href{https://agenticos-mvp.netlify.app}{agenticos-mvp.netlify.app}}{}{

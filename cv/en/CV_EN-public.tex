@@ -3,7 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
-\usepackage[margin=2cm, top=1.8cm, bottom=1.8cm]{geometry}
+\usepackage[margin=1.8cm, top=1.3cm, bottom=1.3cm]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{hyperref}
@@ -31,7 +31,7 @@
   {}{0em}{}
   [\vspace{0.3em}\color{lightgray}\hrule\vspace{0.4em}]
 
-\titlespacing{\section}{0pt}{1.2em}{0.5em}
+\titlespacing{\section}{0pt}{0.9em}{0.4em}
 
 \pagestyle{empty}
 
@@ -132,6 +132,11 @@ am looking forward to deepening my expertise during my Master's degree.
   \item Built a \textbf{custom Kubernetes scheduler} in Python that places each pod on the lowest-latency node with enough free CPU, memory and pod capacity.
   \item Measures node latency live, binds pods through the Kubernetes API and explains every decision with \textit{Scheduled}/\textit{FailedScheduling} events.
   \item Now extending it to \textbf{smart placement and replacement} of services on mobile edge nodes (humanoid robots moving between workstations).
+}
+
+\entrylist{SDN Link-Failure Recovery Benchmark}{2026 (Ongoing)}{Discrete and Network Optimization Problems M, University of Bologna · \href{https://github.com/frigori/net-restoration-bench}{github.com/frigori/net-restoration-bench}}{}{
+  \item Compares \textbf{shared backup path protection (SBPP)}, \textbf{Fast Reroute} and \textbf{global MILP recomputation} on capacity overhead, restoration rate, reaction time and path stretch.
+  \item Python with NetworkX and PuLP; one shared plan/react interface runs all strategies on identical topologies and failure scenarios.
 }
 
 \entrylist{AgenticOS — Multi-Agent AI Audit}{2026}{Lean Startup Lab, Technology Entrepreneurship · \href{https://agenticos-mvp.netlify.app}{agenticos-mvp.netlify.app}}{}{
