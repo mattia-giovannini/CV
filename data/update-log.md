@@ -11,6 +11,7 @@ Usa questo file per annotare modifiche da propagare tra le versioni linguistiche
 ## Modifiche recenti (Novembre 2026)
 
 - [x] Sostituita la LM in Artificial Intelligence con la LM in Ingegneria Informatica (Università di Bologna) in doppio titolo con il Master Ubiquitous Systems and Networks dell'Université Côte d'Azur (Polytech Nice Sophia), 2026--2028, in corso. Aggiornati intestazioni, profili e formazione in tutte le versioni.
+- [x] Francese aggiornato a C1 (certificazione CLA C1, Università di Bologna, novembre 2026) in tutte le versioni e nel portfolio.
 
 ## Da fare
 
