@@ -58,6 +58,8 @@ cd cv/europass && latexmk -pdf CV-Europass-IT.tex
 
 Sono versioni pubbliche: niente telefono, data di nascita o nazionalità. Se un bando li richiede, crea una copia locale (ad es. `cv/europass/private/`, ignorata da git) e aggiungi `\ecvmobile{...}`, `\ecvdateofbirth{...}` e `\ecvnationality{...}` dopo `\ecvemail`. Le competenze linguistiche sono indicate come C1 in tutte e cinque le abilità, in linea con le certificazioni: correggi la griglia se la tua autovalutazione è diversa.
 
+`cv/europass/CV-Tutorato-DISI-2026.tex` è il CV per il bando di tutorato alla pari DISI 2026/27, redatto secondo lo schema `CV_Modello_Europeo` allegato al bando. Contiene dati personali, quindi non è compilato in CI: il telefono viene da `cv/private-contact.tex`, indirizzo, cittadinanza, data di nascita e sesso da `cv/europass/private/dati-personali.tex` (entrambi ignorati da git). Si compila in locale con `cd cv/europass && latexmk -pdf CV-Tutorato-DISI-2026.tex`.
+
 Le versioni con numero di telefono (`CV-IT.tex`, `CV_EN.tex`, `CV_EN-cbi-unibo.tex`, `CV-IT-retail.tex`, `CV-IT-retail-photo.tex`) **non** vengono compilate in CI, perché la repository è pubblica: vanno compilate in locale (vedi sotto).
 
 ## Compilare le versioni private in locale
