@@ -1,169 +1,180 @@
-\documentclass[a4paper,10pt]{article}
+%-------------------------------------------------------------------------------
+% Mattia Giovannini — CV en français (version publique), mise en page Awesome-CV
+% Compiler avec LuaLaTeX :  latexmk -lualatex CV_FR-public.tex
+%-------------------------------------------------------------------------------
+\documentclass[11pt, a4paper]{../awesome-cv}
+\input{../awesome-setup.tex}
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[french]{babel}
-\usepackage[margin=1.8cm, top=1.3cm, bottom=1.3cm]{geometry}
-\usepackage{titlesec}
-\usepackage{enumitem}
-\usepackage{hyperref}
-\usepackage{xcolor}
-\usepackage{fontawesome5}
-\usepackage{array}
-\usepackage{tabularx}
-\usepackage{parskip}
+\position{Étudiant en Master d'ingénierie informatique (double diplôme){\enskip\cdotp\enskip}Licence en ingénierie informatique}
+\address{Bologne, Italie}
 
-% Colors
-\definecolor{accent}{RGB}{80, 100, 200}
-\definecolor{darkgray}{RGB}{50, 50, 50}
-\definecolor{lightgray}{RGB}{130, 130, 130}
-
-% Hyperref setup
-\hypersetup{
-    colorlinks=true,
-    urlcolor=accent,
-    linkcolor=accent
-}
-
-% Section formatting
-\titleformat{\section}
-  {\large\bfseries\color{darkgray}}
-  {}{0em}{}
-  [\vspace{0.3em}\color{lightgray}\hrule\vspace{0.4em}]
-
-\titlespacing{\section}{0pt}{0.9em}{0.4em}
-
-\pagestyle{empty}
-
-\setlist[itemize]{noitemsep, topsep=2pt, leftmargin=1.2em}
-
-% Custom commands
-\newcommand{\entry}[4]{%
-  \noindent\textbf{#1} \hfill \textcolor{accent}{#2}\\
-  \textit{\textcolor{lightgray}{#3}}%
-  \ifx&#4&\else\\\vspace{0.2em}#4\fi
-  \vspace{0.5em}
-}
-
-\newcommand{\entrylist}[5]{%
-  \noindent\textbf{#1} \hfill \textcolor{accent}{#2}\\
-  \textit{\textcolor{lightgray}{#3}}%
-  \ifx&#4&\else\\\vspace{0.2em}#4\fi
-  \vspace{0.3em}
-  \begin{itemize}#5\end{itemize}
-  \vspace{0.3em}
-}
-
-\newcommand{\langentry}[3]{%
-  \noindent\textbf{#1} — #2%
-  \ifx&#3&\else\\\textcolor{lightgray}{\small #3}\fi
-  \vspace{0.4em}
-}
-
-\newcommand{\skillgroup}[2]{%
-  \noindent\textbf{#1 :} #2\par\vspace{0.35em}
-}
-
-%--------------------------
 \begin{document}
 
-%--- HEADER ---%
-\begin{center}
-  {\Huge\bfseries\color{darkgray} Mattia Giovannini}\\[0.4em]
-  {\large\color{accent} Étudiant en Master Ingénierie Informatique (double diplôme) | Diplômé en Génie Informatique}\\[0.7em]
-  \textcolor{lightgray}{
-    \faEnvelope\ \href{mailto:mattia.giovannini6@studio.unibo.it}{mattia.giovannini6@studio.unibo.it}
-    \quad\textbullet\quad
-    \faGithub\ \href{https://github.com/frigori}{github.com/frigori}
-  }
-\end{center}
+\makecvheader[C]
+\makecvfooter{}{Mattia Giovannini~~~·~~~Curriculum Vitae}{\thepage}
 
-\vspace{0.5em}
+%-------------------------------------------------------------------------------
+\cvsection{Profil}
 
-%--- PROFIL ---%
-\section{Profil}
+\begin{cvparagraph}
+Diplômé en ingénierie informatique à l'Université de Bologne et inscrit en double diplôme : Master en ingénierie
+informatique (Université de Bologne) et Master Ubiquitous Systems and Networks (Université Côte d'Azur, Polytech Nice
+Sophia), avec un intérêt marqué pour l'intelligence artificielle, le machine learning et l'analyse de données. Ma
+formation m'a donné des bases solides en algorithmique, statistiques, systèmes et génie logiciel, que j'ai appliquées
+dans un contexte de recherche lors d'un semestre Erasmus en France. Je suis motivé par la conception de systèmes
+intelligents pour résoudre des problèmes concrets.
+\end{cvparagraph}
 
-Diplômé en ingénierie informatique à l'Université de Bologne et inscrit en double diplôme : Master en ingénierie informatique (Université de Bologne) et Master Ubiquitous Systems and Networks (Université Côte d'Azur, Polytech Nice Sophia), avec un intérêt marqué pour l'intelligence artificielle, le machine learning et l'analyse de données. Ma formation m'a donné des bases solides en algorithmique, statistiques, systèmes et génie logiciel, que j'ai appliquées dans un contexte de recherche lors d'un semestre Erasmus en France. Motivé par la conception de systèmes intelligents pour résoudre des problèmes concrets, je poursuis mon parcours en Master pour approfondir mes compétences techniques et scientifiques.
+%-------------------------------------------------------------------------------
+\cvsection{Formation}
+\begin{cventries}
+  \cventry
+    {Double diplôme avec le Master Ubiquitous Systems and Networks, Université Côte d'Azur}
+    {Master en ingénierie informatique — double diplôme}
+    {Bologne, Italie \& Nice, France}
+    {2026 -- 2028 (en cours)}
+    {}
 
-%--- FORMATION ---%
-\section{Formation}
+  \cventry
+    {Note finale : 94/110}
+    {Licence en ingénierie informatique — Université de Bologne}
+    {Bologne, Italie}
+    {2021 -- juillet 2026}
+    {
+      \begin{cvitems}
+        \item {\textbf{Mémoire :} \textit{Détection du trouble du spectre de l'autisme à partir de données d'eye-tracking par machine learning}, classification et analyse de signaux appliquées à des enregistrements cliniques d'oculométrie.}
+        \item {Cours pertinents : analyse mathématique, algèbre linéaire et géométrie, probabilités et statistiques, algorithmique, systèmes d'exploitation, réseaux informatiques, systèmes d'information, génie logiciel, technologies web, architecture des ordinateurs.}
+      \end{cvitems}
+    }
 
-\entry{Master en ingénierie informatique — double diplôme}{2026 -- 2028 (En cours)}{Université de Bologne \& Université Côte d'Azur (Polytech Nice Sophia)}
-{Double diplôme de deux ans avec le Master \textbf{Ubiquitous Systems and Networks} de l'Université Côte d'Azur.}
+  \cventry
+    {Projet d'études Erasmus}
+    {Université de Tours}
+    {Tours, France}
+    {2025}
+    {
+      \begin{cvitems}
+        \item {Projet sur le \textbf{machine learning appliqué à l'analyse du trouble du spectre de l'autisme (TSA)} : classification et extraction de caractéristiques sur des données d'eye-tracking.}
+        \item {Travail dans un environnement académique international et francophone ; renforcement en analyse de données, Python et méthodologie scientifique.}
+      \end{cvitems}
+    }
 
-\entrylist{Licence en ingénierie informatique}{2021 -- juillet 2026}{Université de Bologne}{Note finale : 94/110}{
-  \item Cours pertinents : analyse mathématique, algèbre linéaire et géométrie, probabilités et statistiques, algorithmique, systèmes d'exploitation, réseaux informatiques, systèmes d'information, génie logiciel, technologies web, architecture des ordinateurs.
-  \item \textbf{Mémoire :} \textit{Détection du trouble du spectre de l'autisme à partir de données d'eye-tracking par machine learning} — classification et analyse de signaux appliquées à des enregistrements cliniques d'oculométrie.
-}
+  \cventry
+    {Diplôme de lycée scientifique}
+    {Liceo Augusto Righi}
+    {Bologne, Italie}
+    {2016 -- 2021}
+    {}
+\end{cventries}
 
-\entry{Diplôme de lycée scientifique}{2016 -- 2021}{Liceo Augusto Righi, Bologne}{}
+%-------------------------------------------------------------------------------
+\cvsection{Projets}
+\begin{cventries}
+  \cventry
+    {Équipe projet GenAI}
+    {BOOM GEN AI Challenge 2026 — VEM Sistemi}
+    {}
+    {2026}
+    {
+      \begin{cvitems}
+        \item {Contribution au développement d'un \textbf{assistant GenAI} pour l'analyse automatisée d'appels d'offres et l'aide à la décision \textbf{GO/NO-GO}.}
+        \item {Conception et implémentation d'un \textbf{module de scoring en Python} pour évaluer l'alignement entre les exigences d'un appel d'offres et les capacités de l'entreprise.}
+        \item {\textbf{Prompt engineering} et services \textbf{Azure OpenAI} pour l'extraction, la classification et l'enrichissement des exigences ; analyse d'un pipeline de parsing documentaire.}
+      \end{cvitems}
+    }
 
-%--- EXPERIENCE INTERNATIONALE ---%
-\section{Projet d'études Erasmus}
+  \cventry
+    {Project work · Enterprise Platforms and DevOps M, Université de Bologne}
+    {Scheduler Kubernetes sensible aux ressources}
+    {}
+    {2026 (en cours)}
+    {
+      \begin{cvitems}
+        \item {Développement d'un \textbf{scheduler Kubernetes personnalisé} en Python qui place chaque pod sur le nœud de plus faible latence disposant de CPU, mémoire et capacité suffisantes.}
+        \item {Mesure de la latence des nœuds en temps réel, binding via l'API Kubernetes et justification de chaque décision par des événements \textit{Scheduled}/\textit{FailedScheduling}.}
+        \item {Extension en cours vers le \textbf{placement intelligent et le remplacement} de services sur des nœuds edge mobiles (robots humanoïdes entre postes de travail).}
+      \end{cvitems}
+    }
 
-\entrylist{Expérience Erasmus}{2025}{Université de Tours, France}{}{
-  \item Réalisation d'un projet sur le \textbf{machine learning appliqué à l'analyse du trouble du spectre de l'autisme (TSA)}.
-  \item Application de techniques de classification et d'extraction de caractéristiques à des données d'eye-tracking.
-  \item Expérience dans un environnement académique international et francophone.
-  \item Renforcement des compétences en analyse de données, Python et méthodologie scientifique.
-}
+  \cventry
+    {Discrete and Network Optimization Problems M, Université de Bologne}
+    {Benchmark de restauration après panne de lien SDN}
+    {\href{https://github.com/frigori/net-restoration-bench}{\faGithub\ net-restoration-bench}}
+    {2026 (en cours)}
+    {
+      \begin{cvitems}
+        \item {Comparaison de la \textbf{protection par chemins de secours partagés (SBPP)}, du \textbf{Fast Reroute} et du \textbf{recalcul global MILP} : surcoût en capacité, taux de restauration, temps de réaction.}
+        \item {Python avec NetworkX et PuLP ; une interface plan/react commune exécute les stratégies sur les mêmes topologies et scénarios de panne.}
+      \end{cvitems}
+    }
 
-%--- PROJETS ---%
-\section{Expérience projet}
+  \cventry
+    {Lean Startup Lab · Technology Entrepreneurship}
+    {AgenticOS — Audit IA multi-agents}
+    {\href{https://agenticos-mvp.netlify.app}{\faGlobe\ MVP en ligne}}
+    {2026}
+    {
+      \begin{cvitems}
+        \item {Conception d'un \textbf{système multi-agents Red Team / Blue Team} (Gemini) qui explique pourquoi les agents IA d'achat ignorent un produit de mode.}
+        \item {Un agent Blue Team compile les correctifs en \textbf{JSON-LD} et \textbf{llms.txt} et les évalue en sandbox ; MVP avec interface web et moteur conteneurisé.}
+      \end{cvitems}
+    }
 
-\entrylist{BOOM GEN AI Challenge 2026 — VEM Sistemi}{2026}{Équipe projet GenAI}{}{
-  \item Contribution au développement d'un \textbf{assistant GenAI} pour l'analyse automatisée d'appels d'offres et l'aide à la décision \textbf{GO/NO-GO}.
-  \item Conception et implémentation d'un \textbf{module de scoring en Python} pour évaluer l'alignement entre les exigences d'un appel d'offres et les capacités de l'entreprise.
-  \item Expérimentation de techniques de \textbf{prompt engineering} et de services \textbf{Azure OpenAI} pour l'extraction, la classification et l'enrichissement des exigences.
-  \item Analyse d'un pipeline de \textbf{parsing documentaire} pour normaliser des documents non structurés.
-}
+  \cventry
+    {Projet personnel}
+    {Homelab auto-hébergé}
+    {\href{https://mattia-giovannini.github.io/homelab/}{\faGlobe\ page homelab}}
+    {En cours}
+    {
+      \begin{cvitems}
+        \item {Exploitation de services conteneurisés sur des nœuds Raspberry Pi avec \textbf{Docker, Podman rootless et Kubernetes}, derrière un reverse proxy avec TLS.}
+        \item {Supervision Prometheus/Grafana, sécurité CrowdSec ; banc d'essai pour donner à l'IA agentique un \textbf{accès limité et auditable}.}
+      \end{cvitems}
+    }
+\end{cventries}
 
-\entrylist{Scheduler Kubernetes sensible aux ressources — Project Work}{2026 (En cours)}{Enterprise Platforms and DevOps M, Université de Bologne}{}{
-  \item Développement d'un \textbf{scheduler Kubernetes personnalisé} en Python qui place chaque pod sur le nœud de plus faible latence disposant de CPU, mémoire et capacité suffisantes.
-  \item Latence mesurée en temps réel, chaque décision justifiée par des événements Kubernetes ; extension en cours vers le \textbf{placement intelligent} de services sur nœuds edge mobiles (robots humanoïdes).
-}
+%-------------------------------------------------------------------------------
+\cvsection{Compétences}
+\begin{cvskills}
+  \cvskill{Langages}{C, Java, Python, JavaScript, HTML/CSS, SQL, Bash}
+  \cvskill{ML \& données}{scikit-learn, NumPy, pandas, Matplotlib, Jupyter Notebook}
+  \cvskill{Systèmes \& réseaux}{Linux, TCP/IP, programmation socket, bases de données relationnelles}
+  \cvskill{Outils}{Git, \LaTeX, MATLAB, Docker, Podman, Kubernetes}
+  \cvskill{Centres d'intérêt}{Machine learning, analyse de données, IA générative, conteneurisation, automatisation système}
+\end{cvskills}
 
-\entrylist{Benchmark de restauration après panne de lien SDN}{2026 (En cours)}{Discrete and Network Optimization Problems M, Université de Bologne · \href{https://github.com/frigori/net-restoration-bench}{github.com/frigori/net-restoration-bench}}{}{
-  \item Comparaison de la \textbf{protection par chemins de secours partagés (SBPP)}, du \textbf{Fast Reroute} et du \textbf{recalcul global MILP} : surcoût en capacité, taux de restauration, temps de réaction.
-  \item Python avec NetworkX et PuLP ; une interface plan/react commune exécute les stratégies sur les mêmes topologies et scénarios de panne.
-}
+%-------------------------------------------------------------------------------
+\cvsection{Langues}
+\begin{cvskills}
+  \cvskill{Italien}{Langue maternelle}
+  \cvskill{Anglais — C1}{Duolingo English Test 130/160 (C1) · CLA C1, Université de Bologne · Cambridge First Certificate B2 (178/190)}
+  \cvskill{Français — C1}{CLA C1, Université de Bologne · cours B2/C1 suivis à l'Université de Tours}
+\end{cvskills}
 
-\entrylist{AgenticOS — Audit IA multi-agents}{2026}{Lean Startup Lab, Technology Entrepreneurship · \href{https://agenticos-mvp.netlify.app}{agenticos-mvp.netlify.app}}{}{
-  \item Conception d'un \textbf{système multi-agents Red Team / Blue Team} (Gemini) qui explique pourquoi les agents IA d'achat ignorent un produit de mode.
-  \item Un agent Blue Team compile les correctifs en \textbf{JSON-LD} et \textbf{llms.txt} et les évalue en sandbox ; MVP avec interface web et moteur conteneurisé.
-}
+%-------------------------------------------------------------------------------
+\cvsection{Autres expériences}
+\begin{cventries}
+  \cventry
+    {Webmaster et rédacteur étudiant}
+    {Liceo Augusto Righi}
+    {Bologne, Italie}
+    {2020 -- 2021}
+    {
+      \begin{cvitems}
+        \item {Conception et gestion de plateformes étudiantes (\textit{Righi Network} et \textit{Il Sottobanco}), au service de la communication numérique et du journal de l'école.}
+      \end{cvitems}
+    }
 
-\entrylist{Homelab auto-hébergé}{En cours}{Projet personnel · \href{https://mattia-giovannini.github.io/homelab/}{mattia-giovannini.github.io/homelab}}{}{
-  \item Exploitation de services conteneurisés sur des nœuds Raspberry Pi avec \textbf{Docker, Podman rootless et Kubernetes}, derrière un reverse proxy avec TLS.
-  \item Supervision Prometheus/Grafana, sécurité CrowdSec ; banc d'essai pour donner à l'IA agentique un \textbf{accès limité et auditable}.
-}
-
-%--- COMPETENCES ---%
-\section{Compétences techniques}
-
-\skillgroup{Langages}{C, Java, Python, JavaScript, HTML/CSS, SQL, Bash}
-\skillgroup{Machine learning \& données}{scikit-learn, NumPy, pandas, Matplotlib, Jupyter Notebook}
-\skillgroup{Systèmes \& réseaux}{Linux, TCP/IP, programmation socket, bases de données relationnelles}
-\skillgroup{Outils de développement}{Git, \LaTeX, MATLAB, Docker, Podman \& Kubernetes}
-\skillgroup{Centres d'intérêt}{Machine learning, analyse de données, IA générative, conteneurisation, automatisation système}
-
-%--- AUTRES EXPERIENCES ---%
-\section{Autres expériences}
-
-\entrylist{Webmaster et rédacteur étudiant}{2020 -- 2021}{Liceo Augusto Righi, Bologne}{}{
-  \item Conception et gestion de plateformes étudiantes (\textit{Righi Network} et \textit{Il Sottobanco}), au service de la communication numérique et du journal de l'école.
-  \item Développement de compétences en technologies web, gestion de contenu et travail en équipe.
-}
-
-\entry{Animateur bénévole en centre d'été}{2016 -- 2020}{Estate Ragazzi, Bologne}{Gestion de groupe, travail en équipe, communication et responsabilité dans des activités éducatives.}
-
-%--- LANGUES ---%
-\section{Langues}
-
-\langentry{Italien}{Langue maternelle}{}
-
-\langentry{Anglais}{C1}{Duolingo English Test : 130/160 (C1) · Certification CLA C1, Université de Bologne · Cambridge First Certificate B2 (178/190)}
-
-\langentry{Français}{C1}{Certification CLA C1, Université de Bologne · cours B2/C1 suivis à l'Université de Tours}
+  \cventry
+    {Animateur bénévole en centre d'été}
+    {Estate Ragazzi}
+    {Bologne, Italie}
+    {2016 -- 2020}
+    {
+      \begin{cvitems}
+        \item {Gestion de groupe, travail en équipe, communication et responsabilité dans des activités éducatives.}
+      \end{cvitems}
+    }
+\end{cventries}
 
 \end{document}

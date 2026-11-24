@@ -1,184 +1,180 @@
-\documentclass[a4paper,10pt]{article}
+%-------------------------------------------------------------------------------
+% Mattia Giovannini — English CV (public-safe), Awesome-CV layout
+% Build with LuaLaTeX:  latexmk -lualatex CV_EN-public.tex
+%-------------------------------------------------------------------------------
+\documentclass[11pt, a4paper]{../awesome-cv}
+\input{../awesome-setup.tex}
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[english]{babel}
-\usepackage[margin=1.8cm, top=1.3cm, bottom=1.3cm]{geometry}
-\usepackage{titlesec}
-\usepackage{enumitem}
-\usepackage{hyperref}
-\usepackage{xcolor}
-\usepackage{fontawesome5}
-\usepackage{array}
-\usepackage{tabularx}
-\usepackage{parskip}
+\position{MSc Student in Computer Engineering (Double Degree){\enskip\cdotp\enskip}BSc in Computer Engineering}
+\address{Bologna, Italy}
 
-% Colors
-\definecolor{accent}{RGB}{80, 100, 200}
-\definecolor{darkgray}{RGB}{50, 50, 50}
-\definecolor{lightgray}{RGB}{130, 130, 130}
-
-% Hyperref setup
-\hypersetup{
-    colorlinks=true,
-    urlcolor=accent,
-    linkcolor=accent
-}
-
-% Section formatting
-\titleformat{\section}
-  {\large\bfseries\color{darkgray}}
-  {}{0em}{}
-  [\vspace{0.3em}\color{lightgray}\hrule\vspace{0.4em}]
-
-\titlespacing{\section}{0pt}{0.9em}{0.4em}
-
-\pagestyle{empty}
-
-\setlist[itemize]{noitemsep, topsep=2pt, leftmargin=1.2em}
-
-% Custom commands
-\newcommand{\entry}[4]{%
-  \noindent\textbf{#1} \hfill \textcolor{accent}{#2}\\
-  \textit{\textcolor{lightgray}{#3}}%
-  \ifx&#4&\else\\\vspace{0.2em}#4\fi
-  \vspace{0.5em}
-}
-
-\newcommand{\entrylist}[5]{%
-  \noindent\textbf{#1} \hfill \textcolor{accent}{#2}\\
-  \textit{\textcolor{lightgray}{#3}}%
-  \ifx&#4&\else\\\vspace{0.2em}#4\fi
-  \vspace{0.3em}
-  \begin{itemize}#5\end{itemize}
-  \vspace{0.3em}
-}
-
-\newcommand{\langentry}[3]{%
-  \noindent\textbf{#1} — #2%
-  \ifx&#3&\else\\\textcolor{lightgray}{\small #3}\fi
-  \vspace{0.4em}
-}
-
-\newcommand{\skillgroup}[2]{%
-  \noindent\textbf{#1:} #2\par\vspace{0.35em}
-}
-
-%--------------------------
 \begin{document}
 
-%--- HEADER ---%
-\begin{center}
-  {\Huge\bfseries\color{darkgray} Mattia Giovannini}\\[0.4em]
-  {\large\color{accent} MSc Student in Computer Engineering (Double Degree) | BSc in Computer Engineering}\\[0.7em]
-  \textcolor{lightgray}{
-    \faEnvelope\ \href{mailto:mattia.giovannini6@studio.unibo.it}{mattia.giovannini6@studio.unibo.it}
-    \quad\textbullet\quad
-    \faGithub\ \href{https://github.com/frigori}{github.com/frigori}
-  }
-\end{center}
+\makecvheader[C]
+\makecvfooter{}{Mattia Giovannini~~~·~~~Curriculum Vitae}{\thepage}
 
-\vspace{0.5em}
+%-------------------------------------------------------------------------------
+\cvsection{Profile}
 
-%--- PROFILE ---%
-\section{Profile}
+\begin{cvparagraph}
+Computer Engineering graduate from the University of Bologna with a strong focus on artificial intelligence,
+machine learning and data analysis, enrolled in a double-degree MSc in Computer Engineering (University of
+Bologna) and Ubiquitous Systems and Networks (Université Côte d'Azur, Polytech Nice Sophia). My undergraduate
+studies gave me solid foundations in algorithms, statistics and software engineering, which I applied in a
+research context during an Erasmus semester in France. I am motivated by the challenge of designing
+intelligent systems to solve real-world problems.
+\end{cvparagraph}
 
-Computer Engineering graduate from the University of Bologna with a strong focus on artificial
-intelligence, machine learning, and data analysis, enrolled in a double-degree MSc in Computer Engineering
-(University of Bologna) and Ubiquitous Systems and Networks (Université Côte d'Azur, Polytech Nice Sophia). My undergraduate studies gave me solid foundations in algorithms, statistics,
-and software engineering, which I applied in a research context during an Erasmus semester in France.
-I am motivated by the challenge of designing intelligent systems to solve real-world problems and
-am looking forward to deepening my expertise during my Master's degree.
+%-------------------------------------------------------------------------------
+\cvsection{Education}
+\begin{cventries}
+  \cventry
+    {Double degree with the MSc in Ubiquitous Systems and Networks, Université Côte d'Azur}
+    {MSc in Computer Engineering — Double Degree}
+    {Bologna, Italy \& Nice, France}
+    {2026 -- 2028 (Ongoing)}
+    {}
 
-%--- EDUCATION ---%
-\section{Education}
+  \cventry
+    {Final grade: 94/110}
+    {BSc in Computer Engineering — University of Bologna}
+    {Bologna, Italy}
+    {2021 -- July 2026}
+    {
+      \begin{cvitems}
+        \item {\textbf{Thesis:} \textit{Autism Spectrum Disorder Detection via Eye Tracking Data using Machine Learning}, applying classification and signal-analysis techniques to clinical eye-tracking recordings for ASD screening support.}
+        \item {Relevant courses: Mathematical Analysis, Linear Algebra \& Geometry, Probability \& Statistics, Fundamentals of Computer Science, Operating Systems, Computer Networks, Information Systems, Software Engineering, Web Technologies, Computer Architecture.}
+      \end{cvitems}
+    }
 
-\entry{MSc in Computer Engineering — Double Degree}{2026 -- 2028 (Ongoing)}{University of Bologna \& Université Côte d'Azur (Polytech Nice Sophia)}
-{Two-year double-degree programme with the MSc in \textbf{Ubiquitous Systems and Networks} at Université Côte d'Azur.}
+  \cventry
+    {Erasmus study project}
+    {Université de Tours}
+    {Tours, France}
+    {2025}
+    {
+      \begin{cvitems}
+        \item {Developed a project on \textbf{machine learning for autism spectrum disorder (ASD) analysis}, applying classification and feature extraction to eye-tracking data.}
+        \item {Worked in an international, French-speaking academic environment; strengthened data analysis, Python and scientific methodology.}
+      \end{cvitems}
+    }
 
-\entrylist{BSc in Computer Engineering}{2021 -- July 2026}{University of Bologna}{Final Grade: 94/110}{
-  \item Relevant courses: Mathematical Analysis, Linear Algebra \& Geometry,
-        Applied Mathematics (Probability \& Statistics), Fundamentals of Computer Science,
-        Operating Systems, Computer Networks, Information Systems,
-        Software Engineering, Web Technologies, Computer Architecture
-  \item \textbf{Thesis:} \textit{Autism Spectrum Disorder Detection via Eye Tracking Data
-        using Machine Learning} — applying classification and signal analysis techniques
-        to clinical eye-tracking recordings for ASD screening support
-}
+  \cventry
+    {Scientific High School Diploma}
+    {Liceo Augusto Righi}
+    {Bologna, Italy}
+    {2016 -- 2021}
+    {}
+\end{cventries}
 
-\entry{Scientific High School Diploma}{2016 -- 2021}{Liceo Augusto Righi, Bologna}{}
+%-------------------------------------------------------------------------------
+\cvsection{Projects}
+\begin{cventries}
+  \cventry
+    {GenAI Project Team}
+    {BOOM GEN AI Challenge 2026 — VEM Sistemi}
+    {}
+    {2026}
+    {
+      \begin{cvitems}
+        \item {Collaborated on a \textbf{GenAI-based assistant} for automated tender analysis, supporting the \textbf{GO/NO-GO} evaluation process.}
+        \item {Designed and implemented a \textbf{Python scoring module} to assess alignment between tender requirements and company capabilities.}
+        \item {Used \textbf{prompt engineering} and \textbf{Azure OpenAI} for requirement extraction, classification and enrichment; analysed a document parsing pipeline for unstructured tenders.}
+      \end{cvitems}
+    }
 
-%--- RESEARCH EXPERIENCE ---%
-\section{Erasmus Study Project}
+  \cventry
+    {Project work · Enterprise Platforms and DevOps M, University of Bologna}
+    {Resource-Aware Kubernetes Scheduler}
+    {}
+    {2026 (Ongoing)}
+    {
+      \begin{cvitems}
+        \item {Built a \textbf{custom Kubernetes scheduler} in Python that places each pod on the lowest-latency node with enough free CPU, memory and pod capacity.}
+        \item {Measures node latency live, binds pods through the Kubernetes API and explains every decision with \textit{Scheduled}/\textit{FailedScheduling} events.}
+        \item {Now extending it to \textbf{smart placement and replacement} of services on mobile edge nodes (humanoid robots moving between workstations).}
+      \end{cvitems}
+    }
 
-\entrylist{Erasmus Study Experience}{2025}{Université de Tours, France}{}{
-  \item Developed a project on \textbf{machine learning for autism spectrum disorder (ASD) analysis}
-  \item Applied classification and feature extraction techniques to eye-tracking data
-  \item Gained experience working in an international academic environment
-  \item Strengthened skills in data analysis, Python, and scientific methodology
-}
+  \cventry
+    {Discrete and Network Optimization Problems M, University of Bologna}
+    {SDN Link-Failure Recovery Benchmark}
+    {\href{https://github.com/frigori/net-restoration-bench}{\faGithub\ net-restoration-bench}}
+    {2026 (Ongoing)}
+    {
+      \begin{cvitems}
+        \item {Compares \textbf{shared backup path protection (SBPP)}, \textbf{Fast Reroute} and \textbf{global MILP recomputation} on capacity overhead, restoration rate, reaction time and path stretch.}
+        \item {Python with NetworkX and PuLP; one shared plan/react interface runs all strategies on identical topologies and failure scenarios.}
+      \end{cvitems}
+    }
 
-%--- PROJECT EXPERIENCE ---%
-\section{Project Experience}
+  \cventry
+    {Lean Startup Lab · Technology Entrepreneurship}
+    {AgenticOS — Multi-Agent AI Audit}
+    {\href{https://agenticos-mvp.netlify.app}{\faGlobe\ live MVP}}
+    {2026}
+    {
+      \begin{cvitems}
+        \item {Built a \textbf{Red Team / Blue Team multi-agent system} (Gemini) that audits why AI shopping agents skip a fashion product.}
+        \item {A Blue Team agent compiles the fixes into \textbf{JSON-LD} and \textbf{llms.txt} and judges them in a sandbox; shipped as an MVP with web UI and containerised engine.}
+      \end{cvitems}
+    }
 
-\entrylist{BOOM GEN AI Challenge 2026 — VEM Sistemi}{2026}{GenAI Project Team}{}{
-  \item Collaborated on the development of a \textbf{GenAI-based assistant} for automated tender analysis, supporting the \textbf{GO/NO-GO} evaluation process.
-  \item Designed and implemented a \textbf{Python scoring module} to assess alignment between tender requirements and company capabilities.
-  \item Experimented with \textbf{prompt engineering} techniques and \textbf{Azure OpenAI} services for requirement extraction, classification and enrichment.
-  \item Contributed to the analysis of a \textbf{document parsing pipeline} for normalizing unstructured tender documents.
-}
+  \cventry
+    {Personal project}
+    {Self-Hosted Homelab}
+    {\href{https://mattia-giovannini.github.io/homelab/}{\faGlobe\ homelab page}}
+    {Ongoing}
+    {
+      \begin{cvitems}
+        \item {Run containerised services on Raspberry Pi nodes with \textbf{Docker, rootless Podman and Kubernetes}, behind a TLS reverse proxy.}
+        \item {Prometheus/Grafana monitoring, CrowdSec edge security; a testbed for giving agentic AI tools \textbf{scoped, auditable access}.}
+      \end{cvitems}
+    }
+\end{cventries}
 
-\entrylist{Resource-Aware Kubernetes Scheduler — Project Work}{2026 (Ongoing)}{Enterprise Platforms and DevOps M, University of Bologna}{}{
-  \item Built a \textbf{custom Kubernetes scheduler} in Python that places each pod on the lowest-latency node with enough free CPU, memory and pod capacity.
-  \item Measures node latency live, binds pods through the Kubernetes API and explains every decision with \textit{Scheduled}/\textit{FailedScheduling} events.
-  \item Now extending it to \textbf{smart placement and replacement} of services on mobile edge nodes (humanoid robots moving between workstations).
-}
+%-------------------------------------------------------------------------------
+\cvsection{Skills}
+\begin{cvskills}
+  \cvskill{Programming}{C, Java, Python, JavaScript, HTML/CSS, SQL, Bash}
+  \cvskill{ML \& Data}{scikit-learn, NumPy, pandas, Matplotlib, Jupyter Notebook}
+  \cvskill{Systems \& Networks}{Linux, TCP/IP, socket programming, relational databases}
+  \cvskill{Tools}{Git, \LaTeX, MATLAB, Docker, Podman, Kubernetes}
+  \cvskill{Interests}{Machine learning, data analysis, containerization, system automation}
+\end{cvskills}
 
-\entrylist{SDN Link-Failure Recovery Benchmark}{2026 (Ongoing)}{Discrete and Network Optimization Problems M, University of Bologna · \href{https://github.com/frigori/net-restoration-bench}{github.com/frigori/net-restoration-bench}}{}{
-  \item Compares \textbf{shared backup path protection (SBPP)}, \textbf{Fast Reroute} and \textbf{global MILP recomputation} on capacity overhead, restoration rate, reaction time and path stretch.
-  \item Python with NetworkX and PuLP; one shared plan/react interface runs all strategies on identical topologies and failure scenarios.
-}
+%-------------------------------------------------------------------------------
+\cvsection{Languages}
+\begin{cvskills}
+  \cvskill{Italian}{Native}
+  \cvskill{English — C1}{Duolingo English Test 130/160 (C1) · CLA C1, University of Bologna · Cambridge First Certificate B2 (178/190)}
+  \cvskill{French — C1}{CLA C1, University of Bologna · B2/C1 courses at Université de Tours}
+\end{cvskills}
 
-\entrylist{AgenticOS — Multi-Agent AI Audit}{2026}{Lean Startup Lab, Technology Entrepreneurship · \href{https://agenticos-mvp.netlify.app}{agenticos-mvp.netlify.app}}{}{
-  \item Built a \textbf{Red Team / Blue Team multi-agent system} (Gemini) that audits why AI shopping agents skip a fashion product.
-  \item A Blue Team agent compiles the fixes into \textbf{JSON-LD} and \textbf{llms.txt} and judges them in a sandbox; shipped as an MVP with web UI and containerised engine.
-}
+%-------------------------------------------------------------------------------
+\cvsection{Other Experience}
+\begin{cventries}
+  \cventry
+    {Student Webmaster \& Editor}
+    {Liceo Augusto Righi}
+    {Bologna, Italy}
+    {2020 -- 2021}
+    {
+      \begin{cvitems}
+        \item {Designed and managed the school's student platforms (\textit{Righi Network} and \textit{Il Sottobanco}), supporting the school newspaper's online presence.}
+      \end{cvitems}
+    }
 
-\entrylist{Self-Hosted Homelab}{Ongoing}{Personal project · \href{https://mattia-giovannini.github.io/homelab/}{mattia-giovannini.github.io/homelab}}{}{
-  \item Run containerised services on Raspberry Pi nodes with \textbf{Docker, rootless Podman and Kubernetes}, behind a TLS reverse proxy.
-  \item Prometheus/Grafana monitoring, CrowdSec edge security; a testbed for giving agentic AI tools \textbf{scoped, auditable access}.
-}
-
-%--- TECHNICAL SKILLS ---%
-\section{Technical Skills}
-
-\skillgroup{Programming Languages}{C, Java, Python, JavaScript, HTML/CSS, SQL, Bash}
-\skillgroup{Machine Learning \& Data}{scikit-learn, NumPy, pandas, Matplotlib, Jupyter Notebook}
-\skillgroup{Systems \& Networking}{Linux, TCP/IP, socket programming, relational databases}
-\skillgroup{Development Tools}{Git, \LaTeX, MATLAB, Docker, Podman \& Kubernetes}
-\skillgroup{Areas of Interest}{Machine Learning,
-                               Data Analysis,
-                               Containerization, System Automation}
-%--- OTHER EXPERIENCE ---%
-\section{Other Experience}
-
-\entrylist{Student Webmaster \& Editor}{2020 -- 2021}{Liceo Augusto Righi, Bologna}{}{
-  \item Designed and managed the school's student platforms (\textit{Righi Network} and \textit{Il Sottobanco}), supporting digital interaction and the school newspaper's online presence.
-  \item Developed skills in web technologies, content management, and team collaboration.
-}
-
-\entry{Volunteer Summer Camp Educator}{2016 -- 2020}{Estate Ragazzi, Bologna}
-{Group management, teamwork, communication, and responsibility in educational activities}
-
-%--- LANGUAGES ---%
-\section{Languages}
-
-\langentry{Italian}{Native}{}
-
-\langentry{English}{C1}
-  {Duolingo English Test: 130/160 (C1) · CLA Certification C1, University of Bologna · Cambridge First Certificate B2 (178/190)}
-
-\langentry{French}{C1}
-  {CLA Certification C1, University of Bologna · B2/C1 courses completed at Université de Tours}
+  \cventry
+    {Volunteer Summer Camp Educator}
+    {Estate Ragazzi}
+    {Bologna, Italy}
+    {2016 -- 2020}
+    {
+      \begin{cvitems}
+        \item {Group management, teamwork, communication and responsibility in educational activities.}
+      \end{cvitems}
+    }
+\end{cventries}
 
 \end{document}

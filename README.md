@@ -35,6 +35,16 @@ Il workflow compila **solo** le versioni public-safe, senza numero di telefono:
 
 Queste versioni vengono pubblicate su GitHub Pages per l'accesso da browser.
 
+### Layout Awesome-CV (versioni public IT/EN/FR)
+
+`CV-IT-public.tex`, `CV_EN-public.tex` e `CV_FR-public.tex` usano il template [Awesome-CV](https://github.com/posquit0/Awesome-CV) (LPPL 1.3c): la classe è in `cv/awesome-cv.cls` (copia non modificata) e le impostazioni comuni (colori, margini, contatti, font) in `cv/awesome-setup.tex`. Vanno compilate con LuaLaTeX, dalla cartella della lingua:
+
+```bash
+cd cv/en && latexmk -lualatex CV_EN-public.tex
+```
+
+Servono i pacchetti TeX `sourcesans`, `roboto` e `fontawesome6` (inclusi in TeX Live completo). Le altre versioni restano sul layout precedente e si compilano con `latexmk -pdf`.
+
 Le versioni con numero di telefono (`CV-IT.tex`, `CV_EN.tex`, `CV_EN-cbi-unibo.tex`, `CV-IT-retail.tex`, `CV-IT-retail-photo.tex`) **non** vengono compilate in CI, perché la repository è pubblica: vanno compilate in locale (vedi sotto).
 
 ## Compilare le versioni private in locale
