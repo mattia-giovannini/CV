@@ -1,0 +1,110 @@
+%-------------------------------------------------------------------------------
+% Mattia Giovannini — English Europass CV (public version)
+% europasscv class (CTAN, LPPL 1.3). Build with:  latexmk -pdf CV-Europass-EN.tex
+% Public version: no phone, date of birth or nationality. If an application needs
+% them, add \ecvmobile, \ecvdateofbirth and \ecvnationality in an untracked local
+% copy (see README).
+%-------------------------------------------------------------------------------
+\documentclass[english,a4paper]{europasscv}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\urlstyle{same}
+
+\ecvname{Mattia Giovannini}
+\ecvaddress{Bologna, Italy}
+\ecvemail{mattia.giovannini6@studio.unibo.it}
+\ecvhomepage{mattia-giovannini.github.io github.com/frigori}
+
+\begin{document}
+\begin{europasscv}
+
+\ecvpersonalinfo
+
+\ecvbigitem{Profile}{MSc student in Computer Engineering (University of Bologna), double degree with the MSc in Ubiquitous Systems and Networks (Université Côte d'Azur)}
+
+%-------------------------------------------------------------------------------
+\ecvsection{Education and training}
+
+\ecvtitlelevel{2026 -- 2028 (ongoing)}{MSc in Computer Engineering — Double Degree}{}
+\ecvitem{}{University of Bologna, Bologna (Italy) \& Université Côte d'Azur, Polytech Nice Sophia, Nice (France)}
+\ecvitem{}{Two-year double-degree programme with the MSc in \textbf{Ubiquitous Systems and Networks}.}
+
+\ecvtitlelevel{2021 -- July 2026}{BSc in Computer Engineering — final grade 94/110}{}
+\ecvitem{}{University of Bologna, Bologna (Italy)}
+\ecvitem{}{
+  \begin{ecvitemize}
+    \item \textbf{Thesis:} \textit{Autism Spectrum Disorder Detection via Eye Tracking Data using Machine Learning}
+    \item Relevant courses: Mathematical Analysis, Linear Algebra \& Geometry, Probability \& Statistics, Fundamentals of Computer Science, Operating Systems, Computer Networks, Information Systems, Software Engineering, Web Technologies, Computer Architecture
+  \end{ecvitemize}
+}
+
+\ecvtitle{2025}{Erasmus+ study project}
+\ecvitem{}{Université de Tours, Tours (France)}
+\ecvitem{}{Project on \textbf{machine learning for autism spectrum disorder (ASD) analysis}: classification and feature extraction on eye-tracking data, in an international, French-speaking academic environment.}
+
+\ecvtitle{2016 -- 2021}{Scientific High School Diploma}
+\ecvitem{}{Liceo Augusto Righi, Bologna (Italy)}
+
+%-------------------------------------------------------------------------------
+\ecvsection{Projects}
+
+\ecvtitle{2026 (ongoing)}{Resource-Aware Kubernetes Scheduler}
+\ecvitem{}{Project work, Enterprise Platforms and DevOps M — University of Bologna}
+\ecvitem{}{Custom Kubernetes scheduler in Python that places each pod on the lowest-latency node with enough free resources and explains every decision through Kubernetes events; now being extended to smart placement of services on mobile edge nodes.}
+
+\ecvtitle{2026 (ongoing)}{SDN Link-Failure Recovery Benchmark}
+\ecvitem{}{Discrete and Network Optimization Problems M — University of Bologna \newline \url{https://github.com/frigori/net-restoration-bench}}
+\ecvitem{}{Compares shared backup path protection (SBPP), Fast Reroute and global MILP recomputation on capacity overhead, restoration rate and reaction time (Python, NetworkX, PuLP).}
+
+\ecvtitle{2026}{AgenticOS — Multi-Agent AI Audit}
+\ecvitem{}{Lean Startup Lab, Technology Entrepreneurship \newline \url{https://agenticos-mvp.netlify.app}}
+\ecvitem{}{Red Team / Blue Team multi-agent system (Gemini) that audits why AI shopping agents skip a fashion product and compiles the fixes into JSON-LD and llms.txt; shipped as an MVP.}
+
+\ecvtitle{2026}{BOOM GEN AI Challenge 2026 — VEM Sistemi}
+\ecvitem{}{GenAI project team}
+\ecvitem{}{GenAI-based assistant for automated tender analysis (GO/NO-GO evaluation): Python scoring module, prompt engineering and Azure OpenAI for requirement extraction.}
+
+\ecvtitle{Ongoing}{Self-Hosted Homelab}
+\ecvitem{}{Personal project \newline \url{https://mattia-giovannini.github.io/homelab/}}
+\ecvitem{}{Containerised services on Raspberry Pi nodes with Docker, rootless Podman and Kubernetes; Prometheus/Grafana monitoring and CrowdSec edge security.}
+
+%-------------------------------------------------------------------------------
+\ecvsection{Volunteering and activities}
+
+\ecvtitle{2020 -- 2021}{Student Webmaster \& Editor}
+\ecvitem{}{Liceo Augusto Righi, Bologna (Italy)}
+\ecvitem{}{Designed and managed the school's student platforms (\textit{Righi Network} and \textit{Il Sottobanco}).}
+
+\ecvtitle{2016 -- 2020}{Volunteer Summer Camp Educator}
+\ecvitem{}{Estate Ragazzi, Bologna (Italy)}
+\ecvitem{}{Group management, teamwork, communication and responsibility in educational activities.}
+
+%-------------------------------------------------------------------------------
+\ecvsection{Personal skills}
+
+\ecvmothertongue{Italian}
+\ecvlanguageheader
+\ecvlanguage{English}{C1}{C1}{C1}{C1}{C1}
+\ecvlanguagecertificate{CLA C1, University of Bologna; Duolingo English Test 130/160 (C1); Cambridge First Certificate B2 (178/190)}
+\ecvlastlanguage{French}{C1}{C1}{C1}{C1}{C1}
+\ecvlanguagecertificate{CLA C1, University of Bologna; B2/C1 courses at Université de Tours}
+\ecvlanguagefooter
+
+\ecvblueitem{Computer skills}{
+  \begin{ecvitemize}
+    \item Programming: C, Java, Python, JavaScript, HTML/CSS, SQL, Bash
+    \item Machine learning \& data: scikit-learn, NumPy, pandas, Matplotlib, Jupyter Notebook
+    \item Systems \& networks: Linux, TCP/IP, socket programming, relational databases
+    \item Tools: Git, \LaTeX, MATLAB, Docker, Podman, Kubernetes
+  \end{ecvitemize}
+}
+
+%-------------------------------------------------------------------------------
+\ecvsection{Additional information}
+
+\ecvblueitem{Personal data}{I authorise the processing of my personal data under Regulation (EU) 2016/679 (GDPR).}
+
+\end{europasscv}
+\end{document}

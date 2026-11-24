@@ -1,0 +1,110 @@
+%-------------------------------------------------------------------------------
+% Mattia Giovannini — CV Europass in italiano (versione pubblica)
+% Classe europasscv (CTAN, LPPL 1.3). Compilare con:  latexmk -pdf CV-Europass-IT.tex
+% Versione pubblica: niente telefono, data di nascita o nazionalità. Se un bando
+% li richiede, aggiungere \ecvmobile, \ecvdateofbirth e \ecvnationality in una
+% copia locale non tracciata (vedi README).
+%-------------------------------------------------------------------------------
+\documentclass[italian,a4paper]{europasscv}
+
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\urlstyle{same}
+
+\ecvname{Mattia Giovannini}
+\ecvaddress{Bologna, Italia}
+\ecvemail{mattia.giovannini6@studio.unibo.it}
+\ecvhomepage{mattia-giovannini.github.io github.com/frigori}
+
+\begin{document}
+\begin{europasscv}
+
+\ecvpersonalinfo
+
+\ecvbigitem{Profilo}{Studente della Laurea Magistrale in Ingegneria Informatica (Università di Bologna) in doppio titolo con il Master in Ubiquitous Systems and Networks (Université Côte d'Azur)}
+
+%-------------------------------------------------------------------------------
+\ecvsection{Istruzione e formazione}
+
+\ecvtitlelevel{2026 -- 2028 (in corso)}{Laurea Magistrale in Ingegneria Informatica — Doppio Titolo}{}
+\ecvitem{}{Università di Bologna, Bologna (Italia) \& Université Côte d'Azur, Polytech Nice Sophia, Nizza (Francia)}
+\ecvitem{}{Percorso biennale a doppio titolo con il Master in \textbf{Ubiquitous Systems and Networks}.}
+
+\ecvtitlelevel{2021 -- luglio 2026}{Laurea Triennale in Ingegneria Informatica — voto 94/110}{}
+\ecvitem{}{Università di Bologna, Bologna (Italia)}
+\ecvitem{}{
+  \begin{ecvitemize}
+    \item \textbf{Tesi:} \textit{Rilevamento del Disturbo dello Spettro Autistico mediante Machine Learning applicato a Dati di Eye Tracking}
+    \item Corsi rilevanti: Analisi Matematica, Algebra Lineare e Geometria, Probabilità e Statistica, Fondamenti di Informatica, Sistemi Operativi, Reti di Calcolatori, Sistemi Informativi, Ingegneria del Software, Tecnologie Web, Architettura degli Elaboratori
+  \end{ecvitemize}
+}
+
+\ecvtitle{2025}{Progetto di studio Erasmus+}
+\ecvitem{}{Université de Tours, Tours (Francia)}
+\ecvitem{}{Progetto sul \textbf{machine learning per l'analisi del disturbo dello spettro autistico (ASD)}: classificazione ed estrazione di caratteristiche da dati di eye-tracking, in un contesto accademico internazionale e francofono.}
+
+\ecvtitle{2016 -- 2021}{Diploma di Liceo Scientifico}
+\ecvitem{}{Liceo Augusto Righi, Bologna (Italia)}
+
+%-------------------------------------------------------------------------------
+\ecvsection{Progetti}
+
+\ecvtitle{2026 (in corso)}{Scheduler Kubernetes resource-aware}
+\ecvitem{}{Project work, Enterprise Platforms and DevOps M — Università di Bologna}
+\ecvitem{}{Scheduler Kubernetes personalizzato in Python che assegna ogni pod al nodo a latenza minore tra quelli con risorse sufficienti e motiva ogni decisione con eventi Kubernetes; in corso l'estensione allo smart placement di servizi su nodi edge mobili.}
+
+\ecvtitle{2026 (in corso)}{Benchmark di ripristino da guasti di link SDN}
+\ecvitem{}{Discrete and Network Optimization Problems M — Università di Bologna \newline \url{https://github.com/frigori/net-restoration-bench}}
+\ecvitem{}{Confronto tra backup condiviso (SBPP), Fast Reroute e ricalcolo globale MILP su overhead di capacità, tasso di ripristino e tempo di reazione (Python, NetworkX, PuLP).}
+
+\ecvtitle{2026}{AgenticOS — Audit multi-agente con IA}
+\ecvitem{}{Lean Startup Lab, Technology Entrepreneurship \newline \url{https://agenticos-mvp.netlify.app}}
+\ecvitem{}{Sistema multi-agente Red Team / Blue Team (Gemini) che analizza perché gli agenti IA di shopping ignorano un prodotto moda e traduce le correzioni in JSON-LD e llms.txt; rilasciato come MVP.}
+
+\ecvtitle{2026}{BOOM GEN AI Challenge 2026 — VEM Sistemi}
+\ecvitem{}{Progetto GenAI}
+\ecvitem{}{Assistente basato su GenAI per l'analisi automatica di bandi di gara (valutazione GO/NO-GO): modulo di scoring in Python, prompt engineering e Azure OpenAI per l'estrazione dei requisiti.}
+
+\ecvtitle{In corso}{Homelab self-hosted}
+\ecvitem{}{Progetto personale \newline \url{https://mattia-giovannini.github.io/homelab/}}
+\ecvitem{}{Servizi containerizzati su nodi Raspberry Pi con Docker, Podman rootless e Kubernetes; monitoraggio Prometheus/Grafana e sicurezza CrowdSec.}
+
+%-------------------------------------------------------------------------------
+\ecvsection{Esperienze di volontariato e attività}
+
+\ecvtitle{2020 -- 2021}{Webmaster ed Editor Studentesco}
+\ecvitem{}{Liceo Augusto Righi, Bologna (Italia)}
+\ecvitem{}{Progettazione e gestione delle piattaforme studentesche dell'istituto (\textit{Righi Network} e \textit{Il Sottobanco}).}
+
+\ecvtitle{2016 -- 2020}{Educatore volontario presso centro estivo}
+\ecvitem{}{Estate Ragazzi, Bologna (Italia)}
+\ecvitem{}{Gestione di gruppi, lavoro di squadra, comunicazione e responsabilità in attività educative.}
+
+%-------------------------------------------------------------------------------
+\ecvsection{Competenze personali}
+
+\ecvmothertongue{Italiano}
+\ecvlanguageheader
+\ecvlanguage{Inglese}{C1}{C1}{C1}{C1}{C1}
+\ecvlanguagecertificate{CLA C1, Università di Bologna; Duolingo English Test 130/160 (C1); Cambridge First Certificate B2 (178/190)}
+\ecvlastlanguage{Francese}{C1}{C1}{C1}{C1}{C1}
+\ecvlanguagecertificate{CLA C1, Università di Bologna; corsi B2/C1 presso l'Université de Tours}
+\ecvlanguagefooter
+
+\ecvblueitem{Competenze informatiche}{
+  \begin{ecvitemize}
+    \item Linguaggi: C, Java, Python, JavaScript, HTML/CSS, SQL, Bash
+    \item Machine learning e dati: scikit-learn, NumPy, pandas, Matplotlib, Jupyter Notebook
+    \item Sistemi e reti: Linux, TCP/IP, programmazione socket, database relazionali
+    \item Strumenti: Git, \LaTeX, MATLAB, Docker, Podman, Kubernetes
+  \end{ecvitemize}
+}
+
+%-------------------------------------------------------------------------------
+\ecvsection{Ulteriori informazioni}
+
+\ecvblueitem{Trattamento dei dati personali}{Autorizzo il trattamento dei miei dati personali ai sensi del D.Lgs. 196/2003 e del Regolamento (UE) 2016/679 (GDPR).}
+
+\end{europasscv}
+\end{document}

@@ -7,6 +7,7 @@ Repository pubblica per versionare il curriculum in più lingue.
 - `cv/it/` — curriculum in italiano (`CV-IT.tex`)
 - `cv/en/` — curriculum in inglese (`CV_EN.tex`)
 - `cv/fr/` — curriculum in francese e varianti mirate per alternance
+- `cv/europass/` — CV in formato Europass (italiano e inglese) per bandi e candidature
 - `data/` — dati condivisi e note di aggiornamento
 - `assets/` — foto, loghi o altri asset opzionali
 
@@ -32,6 +33,8 @@ Il workflow compila **solo** le versioni public-safe, senza numero di telefono:
 - `cv/fr/CV_FR-public.tex`
 - `cv/fr/CV_FR-alternance-ia-data.tex`
 - `cv/fr/CV_FR-alternance-ia-spatial.tex`
+- `cv/europass/CV-Europass-IT.tex`
+- `cv/europass/CV-Europass-EN.tex`
 
 Queste versioni vengono pubblicate su GitHub Pages per l'accesso da browser.
 
@@ -44,6 +47,16 @@ cd cv/en && latexmk -lualatex CV_EN-public.tex
 ```
 
 Servono i pacchetti TeX `sourcesans`, `roboto` e `fontawesome6` (inclusi in TeX Live completo). Le altre versioni restano sul layout precedente e si compilano con `latexmk -pdf`.
+
+### CV Europass
+
+`cv/europass/CV-Europass-IT.tex` e `CV-Europass-EN.tex` usano la classe [europasscv](https://ctan.org/pkg/europasscv) (CTAN, inclusa in TeX Live) con il layout Europass classico, ancora accettato da molti bandi universitari. Si compilano con pdfLaTeX:
+
+```bash
+cd cv/europass && latexmk -pdf CV-Europass-IT.tex
+```
+
+Sono versioni pubbliche: niente telefono, data di nascita o nazionalità. Se un bando li richiede, crea una copia locale (ad es. `cv/europass/private/`, ignorata da git) e aggiungi `\ecvmobile{...}`, `\ecvdateofbirth{...}` e `\ecvnationality{...}` dopo `\ecvemail`. Le competenze linguistiche sono indicate come C1 in tutte e cinque le abilità, in linea con le certificazioni: correggi la griglia se la tua autovalutazione è diversa.
 
 Le versioni con numero di telefono (`CV-IT.tex`, `CV_EN.tex`, `CV_EN-cbi-unibo.tex`, `CV-IT-retail.tex`, `CV-IT-retail-photo.tex`) **non** vengono compilate in CI, perché la repository è pubblica: vanno compilate in locale (vedi sotto).
 

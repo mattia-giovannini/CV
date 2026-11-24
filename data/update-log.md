@@ -15,6 +15,7 @@ Usa questo file per annotare modifiche da propagare tra le versioni linguistiche
 - [x] Aggiunti i progetti Scheduler Kubernetes (project work EP), AgenticOS (Lean Startup Lab) e homelab: completi nei CV IT/EN/FR public e completi, AgenticOS nel CV CBI, versioni mirate negli alternance FR; aggiunto Kubernetes alle competenze. CV retail invariati. Tutti i CV restano su 2 pagine.
 - [x] Aggiunto il benchmark di ripristino SDN (Discrete and Network Optimization Problems M, in corso) nei CV IT/EN/FR public e completi e nell'alternance spatial; margini e spaziatura delle sezioni ridotti per restare su 2 pagine.
 - [x] Versioni public IT/EN/FR passate al layout Awesome-CV (cv/awesome-cv.cls + cv/awesome-setup.tex, LuaLaTeX); Erasmus spostato in Formazione. Le altre versioni restano sul layout precedente.
+- [x] Aggiunti i CV Europass IT ed EN (cv/europass/, classe europasscv), compilati in CI e pubblicati sulla pagina GitHub.
 
 ## Da fare
 
